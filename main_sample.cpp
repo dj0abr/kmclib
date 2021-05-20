@@ -35,7 +35,7 @@ void exit_program();
 
 int main(int argc, char *argv[])
 {
-    printf("Raspi Ham Radio Control Board starting ...\n");
+    printf("Sample application starting ...\npress Ctrl-C to exit\n");
 
     if(isRunning("ctlbrd") == 1)
         exit(0);    // do not allow to runs this program twice

@@ -38,11 +38,15 @@ If you use my RPI control board or not, these functions will make RPI software d
 If using a different hardware, just deactivate the I2C initialisation and don't use GPIO or ADC functions. All other stuff will just work.
 
 ## build the library
-make clean;
+make clean
 make
+sudo make install
 
 ## build an application with kmclib
 see the sample: main_sample with it's makefile
+make -f Makefile_sample clean
+make -f Makefile_sample
+./sample (just prints a welcome message and runs in an endless loop. Press Ctrl-C to exit)
 
 ## typical applications we had in mind when creating this library
 
