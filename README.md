@@ -46,8 +46,7 @@ sudo make install
 
 ## build an application with kmclib
 * build and install libkmclib, see above
-* copy kmclib.h to your 
-see the sample: main_sample.cpp with it's makefile
+* see the sample: main_sample.cpp with it's makefile
 
 make -f Makefile_sample clean
 
