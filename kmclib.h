@@ -29,9 +29,6 @@
 #include "touch/xpt2046_rpi.h"
 #include "touch/touch_button.h"
 
-#include "autotuner/tuner.h"
 
 // entry point for an application
-void app_setup();
-void app_loop();
 int getActMenu();   // used by the touch button logic to assign buttons to menus
