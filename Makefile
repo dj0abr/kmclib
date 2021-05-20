@@ -18,7 +18,10 @@ touch/xpt2046_rpi.o touch/touch_button.o
 
 default: $(OBJ)
 	g++ $(CXXFLAGS) -c $(OBJ)
-	ar -rcs kmclib.a $(OBJ)
+	ar -rcs libkmclib.a $(OBJ)
+
+install:
+	cp libkmclib.a /lib
 
 clean:
 	rm -rf *.o *.a

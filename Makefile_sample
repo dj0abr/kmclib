@@ -7,7 +7,7 @@ CXXFLAGS = -Wall -O3 -std=c++0x -Wno-write-strings -Wno-narrowing -I /usr/includ
 OBJ = main_sample.o
 
 default: $(OBJ)
-	g++ $(CXXFLAGS) -o sample $(OBJ) kmclib.a
+	g++ $(CXXFLAGS) -o sample $(OBJ) -lkmclib
 
 clean:
 	rm -rf *.o sample
