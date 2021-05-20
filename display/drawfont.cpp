@@ -29,8 +29,11 @@ https://github.com/kevinboone/fbtextdemo
 
 *
 */
-
 #include "../kmclib.h"
+#include "display.h"
+#include <freetype2/ft2build.h>
+#include <freetype/freetype.h>
+
 
 int init_ft (const char *ttf_file, FT_Face *face, FT_Library *ft, int req_size, char **error)
 {

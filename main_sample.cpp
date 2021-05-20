@@ -29,7 +29,7 @@ do all initialisation here
 *
 */
 
-#include "kmclib.h"
+#include <kmclib.h>
 
 void exit_program();
 

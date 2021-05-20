@@ -33,6 +33,9 @@ usage:
 */
 
 #include "../kmclib.h"
+#include "display.h"
+#include "bargraph.h"
+
 
 t_bargraph bargraph[MAXBARGRAPHS];
 int bargraphanz = 0;

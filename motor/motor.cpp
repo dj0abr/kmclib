@@ -43,6 +43,13 @@ RPWM ... turn right if High GPIO
 */
 
 #include "../kmclib.h"
+#include "motor.h"
+#include "../i2c_rpi/i2c_rpi.h"
+#include "../i2c_rpi/mcp23017.h"
+#include "../i2c_rpi/max11615.h"
+#include "../i2c_rpi/gpio.h"
+#include "../kmlib/km_helper.h"
+
 
 pthread_mutex_t     motor_crit_sec;
 #define LOCK	pthread_mutex_lock(&motor_crit_sec)

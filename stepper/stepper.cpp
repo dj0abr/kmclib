@@ -39,6 +39,12 @@ Usage:
 */
 
 #include "../kmclib.h"
+#include "../i2c_rpi/i2c_rpi.h"
+#include "../i2c_rpi/mcp23017.h"
+#include "../i2c_rpi/max11615.h"
+#include "../i2c_rpi/gpio.h"
+#include "stepper.h"
+#include "../kmlib/km_helper.h"
 
 pthread_mutex_t     stp_crit_sec;
 #define LOCK	pthread_mutex_lock(&stp_crit_sec)

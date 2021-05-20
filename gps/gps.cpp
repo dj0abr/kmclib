@@ -38,8 +38,11 @@ char *getQTHloc();
 void getSunPos(double *pazimuth, double *pelevation);
 
 */
-
 #include "../kmclib.h"
+#include "gps.h"
+#include "../kmlib/kmtimer.h"
+#include "../kmlib/km_helper.h"
+#include "../serial/serial.h"
 
 typedef struct _GPSINFO_ {
     int serialID;

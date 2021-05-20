@@ -47,6 +47,12 @@ This depends on the I2C bus load by other devices
 */
 
 #include "../kmclib.h"
+#include "../i2c_rpi/i2c_rpi.h"
+#include "../i2c_rpi/mcp23017.h"
+#include "../i2c_rpi/max11615.h"
+#include "../i2c_rpi/gpio.h"
+#include "encoder.h"
+#include "../kmlib/km_helper.h"
 
 #define NUM_OF_ENCODERS 3
 

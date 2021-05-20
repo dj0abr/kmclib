@@ -30,8 +30,23 @@
  * 
  * */
 
-#include "../kmclib.h"
+#include <stdio.h>
+#include <errno.h>
+#include <unistd.h>
+#include <termios.h>
+#include <string.h>
+#include <stdlib.h>
+#include <inttypes.h>
+#include <sys/ioctl.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <pthread.h>
+#include <linux/i2c-dev.h>
+#include <linux/i2c.h>
+#include "../kmlib/kmfifo.h" 
 #include "identifySerUSB.h"
+#include "serial_helper.h"
+#include "../kmlib/km_helper.h"
 
 //#define VERBOSE     // activate to print received data into the terminal
 

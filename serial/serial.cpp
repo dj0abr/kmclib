@@ -41,7 +41,9 @@ Raspi supporting WLAN (RPI3, 4 and Zero-W) need remapping of serial port
 
 */
 
-#include "../kmclib.h"
+#include "../kmlib/kmfifo.h" 
+#include "serial.h"
+#include "../ttyUSB/serial_helper.h"
 
 // functions for the primary UART on the Raspi Pins 8 and 10
 // =========================================================

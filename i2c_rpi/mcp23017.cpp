@@ -25,6 +25,10 @@
 */
 
 #include "../kmclib.h"
+#include "gpio.h"
+#include "i2c_rpi.h"
+#include "mcp23017.h"
+
 
 int init_mcp23017()
 {

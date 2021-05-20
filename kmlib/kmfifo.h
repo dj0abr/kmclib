@@ -1,3 +1,6 @@
+#include <inttypes.h>
+#include <pthread.h>
+
 // max number of fifo, just a high number, never really used
 #define MAXFIFOS 200
 

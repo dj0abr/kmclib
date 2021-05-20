@@ -49,6 +49,10 @@
 
 int *ws_keeprunning;
 
+#include "../kmclib.h"
+#include "../kmlib/kmtimer.h"
+#include "websocketserver.h"
+
 #include "ws.h"
 
 void init_ws_locks();

@@ -59,10 +59,8 @@
 
 *
 */
-
 #include "../kmclib.h"
-#include <sys/ioctl.h>
-#include <linux/spi/spidev.h>
+#include "display.h"
 
 struct fb_var_screeninfo vinfo;
 struct fb_fix_screeninfo finfo;

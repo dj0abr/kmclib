@@ -27,6 +27,11 @@ creates and handles touch buttons
 */
 
 #include "../kmclib.h"
+#include "../display/display.h"
+#include "touch_button.h"
+#include "xpt2046_rpi.h"
+#include "../kmlib/km_helper.h"
+#include "../kmclib.h"
 
 void *tbutproc(void *pdata);
 

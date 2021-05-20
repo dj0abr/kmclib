@@ -34,8 +34,9 @@ https://github.com/mwilliams03/Pi-Touchscreen-basic
 */
 
 #include "../kmclib.h"
-#include <linux/input-event-codes.h>
-#include <linux/input.h>
+#include "xpt2046_rpi.h"
+#include "../kmlib/km_helper.h"
+#include "../kmlib/kmfifo.h"
 
 void getTouchScreenDetails(int *screenXmin,int *screenXmax,int *screenYmin,int *screenYmax);
 void getTouchSample(int *rawX, int *rawY, int *rawPressure);

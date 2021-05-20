@@ -25,6 +25,7 @@ Drawing functions
 */
 
 #include "../kmclib.h"
+#include "display.h"
 #include "tjpgd.h"
 
 COLOR WHITE = {0xff,0xff,0xff};

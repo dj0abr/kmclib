@@ -49,8 +49,13 @@
 *               VOLTAGE ... real voltage on pin
 */
 
+
 #include "../kmclib.h"
-#include <linux/i2c-dev.h>
+#include "i2c_rpi.h"
+#include "mcp23017.h"
+#include "max11615.h"
+#include "gpio.h"
+
 
 #define NUM_OF_I2C_PIPES 3 // 0=output 1=input 2=adc
 

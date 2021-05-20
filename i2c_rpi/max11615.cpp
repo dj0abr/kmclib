@@ -49,6 +49,10 @@ needs abt. 3ms to read all ADC (at I2C clock = 100kHz)
 */
 
 #include "../kmclib.h"
+#include "max11615.h"
+#include "gpio.h"
+#include "i2c_rpi.h"
+
 
 int init_adc()
 {

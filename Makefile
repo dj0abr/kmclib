@@ -3,7 +3,7 @@
 # make clean ... delete all build files
 # make ... create the library kmclib
 
-CXXFLAGS = -Wall -O3 -std=c++0x -Wno-write-strings -Wno-narrowing -I /usr/include/freetype2
+CXXFLAGS = -Wall -O3 -std=c++0x -Wno-write-strings -Wno-narrowing -I /usr/include/freetype2 -D BUILDLIBRARY
 OBJ = kmlib/kmtimer.o kmlib/km_helper.o kmlib/kmfifo.o\
 ttyUSB/identifySerUSB.o ttyUSB/serial_helper.o udp/udp.o\
 websocket/ws.o websocket/ws_callbacks.o websocket/websocketserver.o websocket/sha1.o websocket/base64.o websocket/handshake.o\
@@ -22,6 +22,8 @@ default: $(OBJ)
 
 install:
 	cp libkmclib.a /lib
+	mkdir -p /usr/include/kmclib
+	find . -name "*.h" -exec cp {} /usr/include/kmclib \;
 
 clean:
 	rm -rf *.o *.a

@@ -22,14 +22,11 @@
 * 
 */
 
+
+#include "../kmclib.h"
 #include "udp.h"
 
-#ifdef _LINUX_
 void* threadfunction(void* param);
-#endif
-#ifdef _WIN32_
-void threadfunction(void* param);
-#endif
 
 #define MAXUDPTHREADS 20
 RXCFG rxcfg[MAXUDPTHREADS];
@@ -80,12 +77,7 @@ void UdpRxInit(int *sock, int port, void (*rxfunc)(uint8_t *, int, struct sockad
 	if (bind(*sock, (struct sockaddr *)&sin, sizeof(struct sockaddr_in)) != 0)
 	{
 		printf("Failed to bind socket, port:%d\n",port);
-#ifdef _LINUX_
         close(*sock);
-#endif
-#ifdef _WIN32_
-        closesocket(*sock);
-#endif
 		exit(0);
 	}
 
@@ -93,25 +85,14 @@ void UdpRxInit(int *sock, int port, void (*rxfunc)(uint8_t *, int, struct sockad
 	
 	// port sucessfully bound
 	// create the receive thread
-#ifdef _LINUX_
 	pthread_t rxthread;
 	pthread_create(&rxthread, NULL, threadfunction, &(rxcfg[rxcfg_idx]));
-#endif
-#ifdef _WIN32_
-    _beginthread(threadfunction, 0, &(rxcfg[rxcfg_idx]));
-#endif
     rxcfg_idx++;
 }
 
-#ifdef _LINUX_
 void* threadfunction(void* param) {
     socklen_t fromlen;
     pthread_detach(pthread_self());
-#endif
-#ifdef _WIN32_
-void threadfunction(void* param) {
-        int fromlen;
-#endif
     RXCFG rxcfg;
     memcpy((uint8_t *)(&rxcfg), (uint8_t *)param, sizeof(RXCFG));
 	int recvlen;
@@ -129,15 +110,10 @@ void threadfunction(void* param) {
         }
         if (recvlen < 0)
         {
-#ifdef _WIN32_
-            printf("recvfrom error: %d", WSAGetLastError());
-#endif
         }
 	}
-#ifdef _LINUX_
     pthread_exit(NULL); // self terminate this thread
     return NULL;
-#endif
 }
 
 // send UDP message
@@ -158,11 +134,6 @@ void sendUDP(char *destIP, int destPort, uint8_t *pdata, int len)
     //printf("Send to <%s><%d> Len:%d\n",destIP,destPort,len);
     servaddr.sin_addr.s_addr=inet_addr(destIP);
     sendto(sockfd, (char *)pdata, len, 0, (const struct sockaddr *) &servaddr, sizeof(servaddr)); 
-#ifdef _LINUX_
     close(sockfd);
-#endif
-#ifdef _WIN32_
-    closesocket(sockfd);
-#endif
 }
 

@@ -22,6 +22,8 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>
 */
 
+#include "../kmclib.h"
+#include "websocketserver.h"
 #include "ws.h"
 
 extern int useCAT;
