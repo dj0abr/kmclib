@@ -30,7 +30,7 @@ https://github.com/kevinboone/fbtextdemo
 *
 */
 
-#include "../ctlbrd.h"
+#include "../kmclib.h"
 
 int init_ft (const char *ttf_file, FT_Face *face, FT_Library *ft, int req_size, char **error)
 {

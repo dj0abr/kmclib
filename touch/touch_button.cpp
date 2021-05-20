@@ -26,7 +26,7 @@ creates and handles touch buttons
 *
 */
 
-#include "../ctlbrd.h"
+#include "../kmclib.h"
 
 void *tbutproc(void *pdata);
 

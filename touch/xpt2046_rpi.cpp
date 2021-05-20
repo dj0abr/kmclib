@@ -33,7 +33,7 @@ https://github.com/mwilliams03/Pi-Touchscreen-basic
 *
 */
 
-#include "../ctlbrd.h"
+#include "../kmclib.h"
 #include <linux/input-event-codes.h>
 #include <linux/input.h>
 

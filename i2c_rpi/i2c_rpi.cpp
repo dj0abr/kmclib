@@ -49,7 +49,7 @@
 *               VOLTAGE ... real voltage on pin
 */
 
-#include "../ctlbrd.h"
+#include "../kmclib.h"
 #include <linux/i2c-dev.h>
 
 #define NUM_OF_I2C_PIPES 3 // 0=output 1=input 2=adc

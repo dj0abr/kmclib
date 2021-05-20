@@ -46,7 +46,7 @@ This depends on the I2C bus load by other devices
 *
 */
 
-#include "../ctlbrd.h"
+#include "../kmclib.h"
 
 #define NUM_OF_ENCODERS 3
 

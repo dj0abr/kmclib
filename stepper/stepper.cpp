@@ -38,7 +38,7 @@ Usage:
 
 */
 
-#include "../ctlbrd.h"
+#include "../kmclib.h"
 
 pthread_mutex_t     stp_crit_sec;
 #define LOCK	pthread_mutex_lock(&stp_crit_sec)

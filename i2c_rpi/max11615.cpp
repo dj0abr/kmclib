@@ -48,7 +48,7 @@ needs abt. 3ms to read all ADC (at I2C clock = 100kHz)
 
 */
 
-#include "../ctlbrd.h"
+#include "../kmclib.h"
 
 int init_adc()
 {

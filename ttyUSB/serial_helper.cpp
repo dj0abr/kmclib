@@ -30,7 +30,7 @@
  * 
  * */
 
-#include "../ctlbrd.h"
+#include "../kmclib.h"
 #include "identifySerUSB.h"
 
 //#define VERBOSE     // activate to print received data into the terminal

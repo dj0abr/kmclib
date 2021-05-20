@@ -39,7 +39,7 @@ void getSunPos(double *pazimuth, double *pelevation);
 
 */
 
-#include "../ctlbrd.h"
+#include "../kmclib.h"
 
 typedef struct _GPSINFO_ {
     int serialID;

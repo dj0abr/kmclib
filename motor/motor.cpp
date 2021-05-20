@@ -42,7 +42,7 @@ RPWM ... turn right if High GPIO
 
 */
 
-#include "../ctlbrd.h"
+#include "../kmclib.h"
 
 pthread_mutex_t     motor_crit_sec;
 #define LOCK	pthread_mutex_lock(&motor_crit_sec)

@@ -32,7 +32,7 @@ usage:
 *
 */
 
-#include "../ctlbrd.h"
+#include "../kmclib.h"
 
 t_bargraph bargraph[MAXBARGRAPHS];
 int bargraphanz = 0;

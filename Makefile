@@ -14,8 +14,7 @@ motor/motor.o\
 gps/gps.o gps/sunposition.o\
 rotary/encoder.o\
 display/display.o display/display_draw.o display/tjpgd.o display/bargraph.o display/drawfont.o\
-touch/xpt2046_rpi.o touch/touch_button.o\
-autotuner/autotuner.o autotuner/bar_graphs.o autotuner/touch_buttons.o autotuner/menu.o autotuner/showvals.o
+touch/xpt2046_rpi.o touch/touch_button.o
 
 default: $(OBJ)
 	g++ $(CXXFLAGS) -c $(OBJ)

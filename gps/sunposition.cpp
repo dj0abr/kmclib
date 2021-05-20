@@ -30,7 +30,7 @@ https://www.mikrocontroller.net/attachment/43830/sonnenposition.c
 
 */
 
-#include "../ctlbrd.h"
+#include "../kmclib.h"
 #include "sunposition.h"
 
 JDatum Datum2JDatum(Zeit Jetzt)

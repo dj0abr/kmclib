@@ -60,7 +60,7 @@
 *
 */
 
-#include "../ctlbrd.h"
+#include "../kmclib.h"
 #include <sys/ioctl.h>
 #include <linux/spi/spidev.h>
 

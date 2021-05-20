@@ -24,7 +24,7 @@
 * 
 */
 
-#include "../ctlbrd.h"
+#include "../kmclib.h"
 
 int init_mcp23017()
 {
